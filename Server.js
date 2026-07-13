@@ -45,7 +45,7 @@ app.use(express.static("public"));
 // CONFIGURAÇÃO DE BODY PARSER
 // =====================================================================
 app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 
 // =====================================================================
 // CONFIGURAÇÃO DE SESSÕES
