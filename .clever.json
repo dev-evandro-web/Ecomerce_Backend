@@ -1,12 +1,5 @@
 {
-  "apps": [
-    {
-      "app_id": "app_22816a7a-023a-42fd-8849-a28684b3159e",
-      "org_id": "user_2096126b-57c9-4b67-a25c-0ada94270aa9",
-      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_22816a7a-023a-42fd-8849-a28684b3159e.git",
-      "git_ssh_url": "git+ssh://git@push-n3-par-clevercloud-customers.services.clever-cloud.com/app_22816a7a-023a-42fd-8849-a28684b3159e.git",
-      "name": "ecomerce-app",
-      "alias": "ecomerce-app"
-    }
-  ]
+  "deploy": {
+    "root": "."
+  }
 }
