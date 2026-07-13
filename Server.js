@@ -10,7 +10,7 @@ const app = express();
 // =======================================================
 const Sequelize = require("sequelize");
 const handlebars = require("express-handlebars");
-const bodyparser = require("body-parser");
+
 
 // ========================================================
 // IMPORTAÇÃO PARA AUTENTICAÇÃO 
@@ -44,7 +44,7 @@ app.use(express.static("public"));
 // ====================================================================
 // CONFIGURAÇÃO DE BODY PARSER
 // =====================================================================
-app.use(bodyparser.json());
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // =====================================================================
