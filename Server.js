@@ -85,15 +85,11 @@ res.locals.error = req.flash("error");
 // ============================================================
 // CONEXÃO COM O BANCO DE DADOS
 // ===========================================================
-const sequelize = new Sequelize(
-process.env.MYSQL_ADDON_DB || process.env.MYSQL_DATABASE,
-process.env.MYSQL_ADDON_USER || process.env.MYSQL_USER,
-process.env.MYSQL_ADDON_PASSWORD || process.env.MYSQL_PASSWORD,
-{
- host: process.env.MYSQL_ADDON_HOST || process.env.MYSQL_HOST,
- port: process.env.MYSQL_ADDON_PORT || process.env.MYSQL_PORT || 3306,
- dialect:"mysql",
- logging: false
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: 'mysql',
+  dialectModule: require('mysql2'),
+  logging: false,
+  dialectOptions: { ssl: { rejectUnauthorized: false } }
 });
 
 sequelize.authenticate()
