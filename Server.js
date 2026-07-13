@@ -261,7 +261,7 @@ app.post("/registro/novo", (req, res) => {
             });
         }
     });
-});
+}); 
 
 // Rota de Logout
 app.get("/logout", (req, res, next) => {
