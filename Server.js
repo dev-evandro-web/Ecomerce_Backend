@@ -414,7 +414,7 @@ app.get("/dashboard", verificarAuthenticacao, function(req, res){
 // =============================================================
 // INICIALIZA O SERVIDOR
 // =============================================================
-const porta = process.env.PORT || 8081;
+const porta = process.env.PORT || 3000;
 
 app.listen(porta, function() {
     console.log("Servidor iniciado na porta " + porta);
